@@ -1,0 +1,26 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: Test1
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: 
+    argocd-image-updater.argoproj.io/update-strategy: digest
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: Test1
+  project: default
+  source:
+    repoURL: https://github.com/mguletskii/argo_image_updater.git
+    targetRevision: main
+    path: overlays/dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
