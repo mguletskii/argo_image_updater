@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test_app1
+  name: test-app1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test_app1
+      app: test-app1
   template:
     metadata:
       labels:
-        app: test_app1
+        app: test-app1
     spec:
       containers:
       - image: maksimguletskiisensorbergcom/app1:latest
-        name: test_app1
+        name: test-app1
