@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: Test1
+  name: test1
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -12,7 +12,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: Test1
+    namespace: test1
   project: default
   source:
     repoURL: https://github.com/mguletskii/argo_image_updater.git
