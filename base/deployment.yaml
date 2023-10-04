@@ -13,5 +13,5 @@ spec:
         app: test-app1
     spec:
       containers:
-      - image: maksimguletskiisensorbergcom/app1:latest
+      - image: maksimguletskiisensorbergcom/app2:latest
         name: test-app1
