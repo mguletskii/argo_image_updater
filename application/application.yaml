@@ -7,7 +7,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd-image-updater.argoproj.io/image-list: maksimguletskiisensorbergcom/app2:*
+    argocd-image-updater.argoproj.io/image-list: maksimguletskiisensorbergcom/app2:*v3.0.0
 spec:
   destination:
     server: https://kubernetes.default.svc
