@@ -7,6 +7,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
+    argocd-image-updater.argoproj.io/git-branch: main:image-updater{{range .Images}}-{{.Name}}-{{.NewTag}}{{end}}
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argo-git
     argocd-image-updater.argoproj.io/image-list: maksimguletskiisensorbergcom/app2:v3.0.1, \
                                                   maksimguletskiisensorbergcom/app1:latest
