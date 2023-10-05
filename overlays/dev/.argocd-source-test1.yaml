@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - maksimguletskiisensorbergcom/app2:v3.0.1
