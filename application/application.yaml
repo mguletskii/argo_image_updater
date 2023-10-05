@@ -8,7 +8,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
-    argocd-image-updater.argoproj.io/image-list: maksimguletskiisensorbergcom/app2:v3.0.0, \
+    argocd-image-updater.argoproj.io/image-list: maksimguletskiisensorbergcom/app2:v3.0.1, \
                                                   maksimguletskiisensorbergcom/app1:latest
 spec:
   destination:
